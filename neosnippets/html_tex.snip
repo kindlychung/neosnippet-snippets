@@ -1,0 +1,804 @@
+snippet doctypetransitional
+    <!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+snippet doctypeframeset
+    <!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+snippet doctypestrict
+    <!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+snippet html
+    <html>
+    ${1}
+    </html>
+
+snippet objpdf
+    <object data="data:application/pdf;base64,
+        " type="application/pdf" width="100%" height="500px">
+    </object>
+
+snippet cod
+    <code>${1}</code>
+
+snippet head
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=${1:utf-8}">
+        <title>${2}</title>
+    <style type="text/css">
+        ${3}
+    </style>
+        ${4}
+    </head>
+
+snippet metaauthor
+    <meta name="author" content="${1}">
+snippet keywords
+    <meta name="keywords" content="${1}">
+snippet metaothers
+    <meta name="others" content="${1}">
+snippet metagenerator
+    <meta name="generator" content="${1}">
+snippet metadescription
+    <meta name="description" content="${1}">
+
+snippet scriptcharset
+    <script type="text/javascript" charset="${1:UTF-8}">
+    ${2:TARGET}
+    </script>
+snippet script
+    <script type="text/javascript">
+    ${1:TARGET}
+    </script>
+
+snippet body
+    <body>
+       ${1:TARGET}
+    </body>
+
+snippet h
+options word
+    <h${1:1}>${2}</h$1>
+
+snippet p
+options word
+    <p>
+    ${1}
+    </p>
+
+snippet br
+options word
+    <br />
+
+snippet hr
+options word
+    <hr />
+
+snippet comment
+options word
+    <!--${1:TARGET}-->
+
+snippet b
+options word
+    <b>${1:TARGET}</b>
+snippet small
+options word
+    <small>${1:TARGET}</small>
+snippet strong
+options word
+    <strong>${1:TARGET}</strong>
+snippet sub
+options word
+    <sub>${1:TARGET}</sub>
+snippet sup
+options word
+    <sup>${1:TARGET}</sup>
+snippet ins
+options word
+    <ins>${1:TARGET}</ins>
+snippet del
+options word
+    <del>${1:TARGET}</del>
+snippet em
+options word
+    <em>${1:TARGET}</em>
+snippet bdo
+options word
+    <bdo dir="${1:rtl}">${2:TARGET}</bdo>
+
+snippet pre
+    <pre>
+    ${1:TARGET}
+    </pre>
+
+snippet elemhide
+    <p><input type="button" onclick="return toggleMe('${1:hideID}')" value="Toggle show/hide"></p>
+    <div id="$1">
+    </div>
+
+snippet divpre
+    <div class="prewrap">
+        <div class="pretitle">
+        <div class="codeclick">Double click to toggle code </div>
+        </div>
+    <pre>
+    </pre>
+    </div>
+
+snippet blockquote
+    <blockquote>
+    ${1}
+    </blockquote>
+
+snippet link
+abbr    link stylesheet css
+    <link rel="${1:stylesheet}" href="${2}.css" type="text/css" media="${3:screen}" charset="utf-8">
+
+snippet alignl
+    text-align="left"
+snippet alignr
+    text-align="right"
+snippet alignc
+    text-align="center"
+
+snippet bgcolor
+    bgcolor="${1}"
+
+snippet ahref
+options word
+    <a href="${1}">${2:TARGET}</a>
+snippet ahref_blank
+options word
+    <a href="${1}" target="_blank">${2:TARGET}</a>
+snippet ahref_parent
+options word
+    <a href="${1}" target="_parent">${2:TARGET}</a>
+snippet ahref_top
+options word
+    <a href="${1}" target="_top">${2:TARGET}</a>
+snippet aname
+options word
+    <a name="${1}">${2:TARGET}</a>
+
+snippet framesetcols
+    <frameset cols="${1}">
+    ${2:TARGET}
+    </frameset>
+snippet framesetrows
+    <frameset rows="${1}"
+    ${2:TARGET}
+    </frameset>
+
+snippet iframe
+options word
+    <iframe src="${1}"></iframe>
+snippet tableht
+    <table border="${1}">
+    ${2:TARGET}
+    </table>
+
+snippet th
+options word
+    <th>${1:TARGET}</th>
+
+snippet ulsquare
+options word
+    <ul type="square">${1:TARGET}</ul>
+snippet ulcircle
+options word
+    <ul type="circle">${1:TARGET}</ul>
+snippet uldisc
+options word
+    <ul type="disc">${1:TARGET}</ul>
+snippet ul
+options word
+    <ul>
+    ${1:TARGET}
+    </ul>
+
+snippet ol
+options word
+    <ol>${1:TARGET}</ol>
+snippet olA
+options word
+    <ol type="A">${1:TARGET}</ol>
+snippet ola
+options word
+    <ol type="a">${1:TARGET}</ol>
+snippet olI
+options word
+    <ol type="I">${1:TARGET}</ol>
+snippet oli
+options word
+    <ol type="i">${1:TARGET}</ol>
+
+snippet li
+options word
+    <li>${1:TARGET}</li>
+
+snippet dl
+options word
+    <dl>${1:TARGET}</dl>
+snippet dt
+options word
+    <dt>${1:TARGET}</dt>
+snippet dd
+options word
+    <dd>${1:TARGET}</dd>
+
+snippet form
+    <form>
+    ${1:TARGET}
+    </form>
+
+snippet inputtext
+options word
+    <input type="text" name="${1:user}">
+snippet inputpassword
+options word
+    <input type="password" name="${1:password}">
+snippet inputradio
+options word
+    <input type="radio" name="${1}" value="value">
+snippet inputcheckbox
+options word
+    <input type="checkbox" name="${1}">
+
+snippet textarea
+    <textarea rows="${1}" cols="${2}">
+    ${3:TARGET}
+    </textarea>
+    ${4}
+
+snippet button
+options word
+    <button>${1:TARGET}</button>
+
+snippet select
+options word
+    <select>${1:TARGET}</select>
+
+snippet optgroup
+    <optgroup label="${1}">
+    ${2:TARGET}
+    <optgroup>
+snippet option
+options word
+    <option value="${1}">${2:TARGET}</option>
+
+snippet labelhtml
+options word
+    <label>${1}: <input type="${2:TARGET}" /><label>
+snippet labelfor
+options word
+    <label for="${1}:id">${2:TARGET}</label>
+
+snippet fiedset
+options word
+    <fiedlset>${1:TARGET}</fiedset>
+
+snippet legend
+options word
+    <legend>${1:TARGET}</legend>
+
+snippet id
+options word
+    id="${1}"
+
+snippet class
+options word
+    class="${1}"
+
+snippet pclass
+options word
+    <p class="${1}">${2:TARGET}</p>
+
+snippet pid
+options word
+    <p id="${1}">${2:TARGET}</p>
+
+snippet divid
+options word
+    <div id="${1}">${2:TARGET}</div>
+
+snippet divclass
+options word
+    <div class="${1}">${2:TARGET}</div>
+
+snippet img
+options word
+    <img src="${1}">
+
+snippet div
+options word
+    <div ${1:id="${2:someid\}"}>${3:TARGET}</div>
+
+snippet header
+options word
+    <div class="header" role="header">
+        ${1}
+    </div>
+
+snippet main
+options word
+    <div class="main" role="main">
+        ${1}
+    </div>
+
+snippet footer
+options word
+    <div class="footer" role="contentinfo">
+        ${1}
+    </div>
+
+
+
+snippet     mathexpression
+alias       $
+abbr        $ expression $
+	$${1:#:expression}$${2}
+
+# ========== ENVIRONMENT ==========
+
+snippet     begin
+alias       \begin
+	\begin{${1:#:type}}
+		${2:TARGET}
+	\end{$1}
+
+snippet cases
+alias   \begin{cases} \cases
+	\begin{cases}
+		${1:TARGET}
+	\end{cases}
+
+snippet arraytex
+alias   \begin{array} \array
+	\begin{array}
+		${1:TARGET}
+	\end{array}
+
+snippet bmatrix
+alias   \begin{bmatrix} \bmatrix
+	\begin{bmatrix}
+		${1:TARGET}
+	\end{bmatrix}
+
+snippet pmatrix
+alias   \begin{pmatrix} \pmatrix
+	\begin{pmatrix}
+		${1:TARGET}
+	\end{pmatrix}
+
+snippet align
+alias   \begin{align} \align
+	\begin{align}
+		${1:TARGET}
+	\end{align}
+
+snippet align*
+alias   \begin{align*} \align*
+	\begin{align*}
+		${1:TARGET}
+	\end{align*}
+
+snippet list
+alias   \begin{list} \list
+	\begin{list}
+		${1:TARGET}
+	\end{list}
+
+snippet quotation
+alias   \begin{quotation} \quotation
+	\begin{quotation}
+		${1:TARGET}
+	\end{quotation}
+
+snippet description
+alias   \begin{description} \description
+	\begin{description}
+		\item ${1:TARGET}
+	\end{description}
+
+snippet sloppypar
+alias   \begin{sloppypar} \sloppypar
+	\begin{sloppypar}
+		${1:TARGET}
+	\end{sloppypar}
+
+snippet enumerate
+alias   \begin{enumerate} \enumerate
+	\begin{enumerate}
+		\item ${1:TARGET}
+	\end{enumerate}
+
+snippet theindex
+alias   \begin{theindex} \theindex
+	\begin{theindex}
+		${1:TARGET}
+	\end{theindex}
+
+snippet itemize
+alias   \begin{itemize} \itemize
+	\begin{itemize}
+		\item ${1:TARGET}
+	\end{itemize}
+
+snippet titlepage
+alias   \begin{titlepage} \titlepage
+	\begin{titlepage}
+		${1:TARGET}
+	\end{titlepage}
+
+snippet verbatim
+alias   \begin{verbatim} verb \verbatim
+	\begin{verbatim}
+		${1:TARGET}
+	\end{verbatim}
+
+snippet verbatimtab
+alias   \begin{verbatimtab} \verbatimtab
+	\begin{verbatimtab}[${1:8}]
+		${2:TARGET}
+	\end{verbatim}
+
+snippet trivlist
+alias   \begin{trivlist} \trivlist
+	\begin{trivlist}
+		${1:TARGET}
+	\end{trivlist}
+
+snippet verse
+alias   \begin{verse} \verse
+	\begin{verse}
+		${1:TARGET}
+	\end{verse}
+
+snippet tabletex
+alias   \begin{table} \table
+	\begin{table}
+		${1:TARGET}
+	\end{table}
+
+snippet thebibliography
+alias   \begin{thebibliography} \thebibliography
+	\begin{thebibliography}
+		${1:TARGET}
+	\end{thebibliography}
+
+snippet tabbing
+alias   \begin{tabbing} \tabbing
+	\begin{tabbing}
+		${1:TARGET}
+	\end{tabbing}
+
+snippet note
+alias   \begin{note} \note
+	\begin{note}
+		${1:TARGET}
+	\end{note}
+
+snippet tabular
+alias   \begin{tabular} \tabular
+	\begin{tabular}{${1}}
+		${2:TARGET}
+	\end{tabular}
+
+snippet overlay
+alias   \begin{overlay} \overlay
+	\begin{overlay}
+		${1:TARGET}
+	\end{overlay}
+
+
+snippet slide
+alias   \begin{slide} \slide
+	\begin{slide}
+		${1:TARGET}
+	\end{slide}
+
+snippet displaymath
+alias   \begin{displaymath} \displaymath
+	\begin{displaymath}
+		${1:TARGET}
+	\end{displaymath}
+
+snippet abstract
+alias   \begin{abstract} \abstract
+	\begin{abstract}
+		${1:TARGET}
+	\end{abstract}
+
+snippet eqnarray
+alias   \begin{eqnarray} \eqnarray
+	\begin{eqnarray}
+		${1:TARGET}
+	\end{eqnarray}
+
+snippet eqnarray*
+alias   \begin{eqnarray*} \eqnarray*
+	\begin{eqnarray*}
+		${1:TARGET}
+	\end{eqnarray*}
+
+snippet appendix
+alias   \begin{appendix} \appendix
+	\begin{appendix}
+		${1:TARGET}
+	\end{appendix}
+
+snippet equation
+alias   \begin{equation} \equation
+	\begin{equation}
+		${1:TARGET}
+	\end{equation}
+
+snippet equation*
+alias   \begin{equation*} \equation*
+	\begin{equation*}
+		${1:TARGET}
+	\end{equation*}
+
+snippet center
+alias   \begin{center} \center
+	\begin{center}
+		${1:TARGET}
+	\end{center}
+
+snippet document
+alias   \begin{document} \document
+	\begin{document}
+		${1:TARGET}
+	\end{document}
+
+snippet figure
+alias   \begin{figure} \figure
+	\begin{figure}
+		\begin{center}
+			\includegraphics[${1:width=}]{${2}}
+			\caption{${3}}
+			\label{${4}}
+		\end{center}
+	\end{figure}
+
+snippet filecontents
+alias   \begin{filecontents} \filecontents
+	\begin{filecontents}
+		${1:TARGET}
+	\end{filecontents}
+
+snippet lrbox
+alias   \begin{lrbox} \lrbox
+	\begin{lrbox}
+		${1:TARGET}
+	\end{lrbox}
+
+snippet flushleft
+alias   \begin{flushleft} \flushleft
+	\begin{flushleft}
+		${1:TARGET}
+	\end{flushleft}
+
+snippet flushright
+alias   \begin{flushright} \flushright
+	\begin{flushright}
+		${1:TARGET}
+	\end{flushright}
+
+snippet minipage
+alias   \begin{minipage} \minipage
+	\begin{minipage}
+		${1:TARGET}
+	\end{minipage}
+
+snippet picture
+alias   \begin{picture} \picture
+	\begin{picture}
+		${1:TARGET}
+	\end{picture}
+
+snippet math
+alias   \begin{math} \math
+	\begin{math}
+		${1:TARGET}
+	\end{math}
+
+snippet quote
+alias   \begin{quote} \quote
+	\begin{quote}
+		${1:TARGET}
+	\end{quote}
+
+# ========== SECTION ==========
+
+snippet \part
+alias   part \part{
+	\part{${1}}
+	${0:TARGET}
+
+snippet \chapter
+alias   chapter \chapter{
+	\chapter{${1}}
+	${0:TARGET}
+
+snippet \section
+alias   section \section{
+	\section{${1}}
+	${0:TARGET}
+
+snippet \subsection
+alias   subsection \subsection{
+	\subsection{${1}}
+	${0:TARGET}
+
+snippet \subsubsection
+alias   subsubsection \subsubsection{
+	\subsubsection{${1}}
+	${0:TARGET}
+
+snippet \paragraph
+alias   paragraph \paragraph{
+	\paragraph{${1}}
+	${0:TARGET}
+
+snippet \subparagraph
+alias   subparagraph \subparagraph{
+	\subparagraph{${1}}
+	${0:TARGET}
+
+# ========== FONT ==========
+
+snippet bfseries
+alias   \begin{bfseries} \bfseries
+	\begin{bfseries}
+		${1:TARGET}
+	\end{bfseries}
+
+snippet mdseries
+alias   \begin{mdseries} \mdseries
+	\begin{mdseries}
+		${1:TARGET}
+	\end{mdseries}
+
+snippet ttfamily
+alias   \begin{ttfamily} \ttfamily
+	\begin{ttfamily}
+		${1:TARGET}
+	\end{ttfamily}
+
+snippet sffamily
+alias   \begin{sffamily} \sffamily
+	\begin{sffamily}
+		${1:TARGET}
+	\end{sffamily}
+
+snippet rmfamily
+alias   \begin{rmfamily} \rmfamily
+	\begin{rmfamily}
+		${1:TARGET}
+	\end{rmfamily}
+
+snippet upshape
+alias   \begin{upshape} \upshape
+	\begin{upshape}
+		${1:TARGET}
+	\end{upshape}
+
+snippet slshape
+alias   \begin{slshape} \slshape
+	\begin{slshape}
+		${1:TARGET}
+	\end{slshape}
+
+snippet scshape
+alias   \begin{scshape} \scshape
+	\begin{scshape}
+		${1:TARGET}
+	\end{scshape}
+
+snippet itshape
+alias   \begin{itshape} \itshape
+	\begin{itshape}
+		${1:TARGET}
+	\end{itshape}
+
+# ========== OTHERS ==========
+snippet usepackage
+alias   \usepackage
+	\usepackage${1:[${2\}]}{${3}}
+
+snippet ref
+alias \ref
+	\ref{${1}}${0}
+
+snippet label
+alias \label
+	\label{${1}}${0}
+
+snippet cite
+alias \cite
+	\cite{${1}}${0}
+
+
+########## markdown snippets start ###############
+snippet linkmd
+abbr [link][]
+options word
+    [${1:#:link_id}][]
+snippet linkid
+abbr [link][id]
+options word
+    [${1:#:link}][${2:id}]
+snippet linkurl
+abbr [link](url)
+options word
+    [${1:#:link}](http://${2:#:url})
+snippet linkemail
+abbr [link](email)
+options word
+    [${1:#:link}](mailto:${2:#:email})
+snippet linkurltitle
+abbr [link](url "title")
+options word
+    [${1:#:link}](${2:#:url} "${3:#:title}")
+
+snippet idurl
+abbr [id]: url "title"
+options word
+    [${1:#:id}]: http://${2:#:url} "${3:#:title}"
+snippet idemail
+abbr [id]: email "title"
+options word
+    [${1:#:id}]: mailto:${2:#:url} "${3:#:title}"
+
+snippet altid
+abbr ![alt][id]
+options word
+    ![${1:#:alt}][${2:#:id}]
+snippet alturl
+abbr ![alt](url)
+options word
+    ![${1:#:alt}](${2:#:url})
+snippet alturltitle
+abbr ![alt](url "title")
+options word
+    ![${1:#:alt}](${2:#:url} "${3:#:title}")
+
+snippet emphasis1
+abbr *emphasis*
+options word
+    *${1}*
+snippet emphasis2
+abbr _emphasis_
+options word
+    _${1}_
+
+snippet strong1
+abbr **strong**
+options word
+    **${1}**
+
+snippet strong2
+abbr __strong__
+options word
+    __${1}__
+
+snippet code
+abbr `code`
+options word
+    \`${1}\`
+
+snippet codeblock
+abbr code block
+options head
+    \`\`\`
+    ${1:#:code }
+    \`\`\`
+
+########## markdown snippets end ###############
+
