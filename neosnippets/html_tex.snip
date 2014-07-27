@@ -117,7 +117,7 @@ snippet pre
     </pre>
 
 snippet elemhide
-    <p><input type="button" onclick="return toggleMe('${1:hideID}')" value="Toggle show/hide"></p>
+    <p><input type="button" onclick="return toggleMe('${1:`system("date +%s | shasum | base64 | head -c 10")`}')" value="Toggle show/hide"></p>
     <div id="$1">
     </div>
 
